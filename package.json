@@ -1,0 +1,41 @@
+{
+  "name": "grakkit-boilerplate",
+  "version": "1.0.0",
+  "description": "Grakkit Boilerplate using Vite",
+  "scripts": {
+    "dev": "concurrently -c \"auto\" \"npm:dev:server\" \"npm:dev:js\"",
+    "dev:server": "cd server && java -Xms2G -Xmx2G -Dcom.mojang.eula.agree=true -jar server.jar -nogui",
+    "dev:js": "NODE_ENV=development vite build --watch",
+    "build": "vite build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Nolway/grakkit-boilerplate"
+  },
+  "keywords": [
+    "grakkit",
+    "boilerplate"
+  ],
+  "author": "Nolway",
+  "license": "LGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/Nolway/grakkit-boilerplate/issues"
+  },
+  "homepage": "https://github.com/nolway/grakkit-boilerplate#readme",
+  "devDependencies": {
+    "@grakkit-types/paper": "^1.20.2-1.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.10.0",
+    "@typescript-eslint/parser": "^6.10.0",
+    "concurrently": "^8.2.2",
+    "eslint": "^8.53.0",
+    "eslint-config-prettier": "^9.0.0",
+    "prettier": "^3.0.3",
+    "typescript": "^5.2.2",
+    "vite": "^4.5.0",
+    "vite-grakkit-hrm": "^1.0.1",
+    "vite-grakkit-imports-transform": "^1.0.0"
+  },
+  "dependencies": {
+    "@grakkit/stdlib-paper": "^1.0.14"
+  }
+}
